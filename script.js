@@ -1,15 +1,11 @@
-const { render } = require("express/lib/response");
-
 let currentDay = "Monday";
 let tasks = JSON.parse(localStorage.getItem("plannerTasks")) || {};
+const taskList = document.getElementById("taskList");
 
-// show task for selected day
+// Render tasks for the current day
 function renderTask() {
-    let taskList = document.getElementById("task List");
     taskList.innerHTML = "";
-
     let dayTasks = tasks[currentDay] || [];
-
     dayTasks.forEach((task, index) => {
         let card = document.createElement("div");
         card.className = "task-card";
@@ -17,10 +13,8 @@ function renderTask() {
         let title = document.createElement("h3");
         title.textContent = task.title;
         if (task.completed) title.classList.add("completed");
-
         let notes = document.createElement("p");
         notes.textContent = task.notes;
-
         // Actions
         let actions = document.createElement("div");
         actions.className = "task-actions";
@@ -30,16 +24,14 @@ function renderTask() {
         completeBtn.onclick = () => {
             task.completed = !task.completed;
             saveTasks();
-            
-        };
-
+        }
         let deleteBtn = document.createElement("button");
         deleteBtn.textContent = "delete";
+        deleteBtn.className = "delete-btn";
         deleteBtn.onclick = () => {
-            dayTasks.splice(index,1);
-            saveTask();
+            dayTasks.splice(index, 1);
+            saveTasks();
         };
-
         actions.appendChild(completeBtn);
         actions.appendChild(deleteBtn);
 
@@ -58,33 +50,30 @@ function saveTasks() {
 }
 
 // Add new task
-document.getElementById("addButton").addEventListener("click", () => {
+document.getElementById("addTaskbtn").addEventListener("click", () => {
     let title = document.getElementById("taskTitle").value;
     let notes = document.getElementById("taskNotes").value;
 
-    if (!title) {
+    if (title.trim() === "") {
         alert("Please enter a task title!");
         return;
     }
-
-    let day = document.getElementById("taskDate").value;
-    if (!tasks[day]) tasks[day] = [];
-
-    tasks[day].push({ title, notes, completed: false });
-    saveTasks();
-
+    if (!tasks[currentDay]) tasks[currentDay] = [];
+    tasks[currentDay].push({ title, notes, completed: false });
     document.getElementById("taskTitle").value = "";
     document.getElementById("taskNotes").value = "";
-
-    renderTasks();
+    saveTasks();
 });
-//change day tab
+
+// Change day tab
 document.querySelectorAll(".day-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      document.querySelectorAll(".day-tab").forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      currentDay = tab.dataset.day;
-      renderTask();
+        document.querySelectorAll(".day-btn.active").forEach(el => el.classList.remove("active"));
+        btn.classList.add("active");
+        currentDay = btn.dataset.day;
+        renderTask();
     });
-  });
-        
+});
+
+// Initial render
+renderTask();
