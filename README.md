@@ -84,9 +84,7 @@ You can deploy this project easily using:
 
 * 🎓 AICTE Internship Project (Frontend Web Development, IBM SkillBuild)
 * 💻 Passionate about Web Development, Java, and DSA
-* 🌐 [GitHub Profile]
+* 🌐 [GitHub Profile] 
 
 
----
 
-👉 Do you want me to also add a **step-by-step “How to Run the Project” section** (with commands for cloning and running from GitHub) so evaluators can directly test your planner?
