@@ -23,16 +23,7 @@ A **web-based study planner** built with **HTML, CSS, and JavaScript** to help s
 * **CSS3** – Dark theme, animations, and responsive layout.
 * **JavaScript (ES6)** – Task handling, local storage, and dynamic UI rendering.
 
----
 
-## 🖼️ Screenshots
-
-*(You can add screenshots here after deployment)*
-Example placeholders:
-
-* **Homepage**
-* **Adding a Task**
-* **Task List with Completed & Pending Tasks**
 
 ---
 
@@ -84,7 +75,7 @@ You can deploy this project easily using:
 
 * 🎓 AICTE Internship Project (Frontend Web Development, IBM SkillBuild)
 * 💻 Passionate about Web Development, Java, and DSA
-* 🌐 [GitHub Profile] 
+* 🌐 [GitHub Profile] https://github.com/Sonali8412
 
 
 
