@@ -65,7 +65,7 @@ You can deploy this project easily using:
 
 * **GitHub Pages** → Free static hosting.
 * **Netlify / Vercel** → One-click deployment.
-* Or run locally by opening `index.html` in any browser.
+* Or run locally by opening `planner.html` in any browser.
 
 ---
 
@@ -74,7 +74,7 @@ You can deploy this project easily using:
 * ⏰ Add reminders/notifications for tasks.
 * 📊 Add visual timelines (progress bars, calendar view).
 * 👩‍🎓 Multi-user support with authentication.
-* ☁️ Cloud storage integration (instead of localStorage).
+* ☁️ Local Storage
 
 ---
 
@@ -84,11 +84,8 @@ You can deploy this project easily using:
 
 * 🎓 AICTE Internship Project (Frontend Web Development, IBM SkillBuild)
 * 💻 Passionate about Web Development, Java, and DSA
-* 🌐 [GitHub Profile](https://github.com/your-username) *(replace with your link)*
+* 🌐 [GitHub Profile]
 
----
-
-✨ *This project is a part of my AICTE Internship in Frontend Web Development (IBM SkillBuild), aimed at solving real-world student productivity challenges.*
 
 ---
 
