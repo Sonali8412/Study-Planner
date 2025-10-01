@@ -1,0 +1,125 @@
+/* Dark theme background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f1a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: #00e5ff;
+    text-shadow: 0 0 15px #00e5ff;
+}
+
+/* week tab */
+.week-tab {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.day-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #1e1e2f;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.day-btn:hover {
+    background: #00e5ff;
+    color: #000;
+    transform: scale(1.05);
+}
+.task-input {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+button#addTaskbtn {
+    background: #ff9800;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button#addTaskbtn:hover {
+    background: #e68900;
+}
+
+/* Task Card */
+.task-list {
+    margin-top: 20px;
+    display: grod;
+    gap: 15px;
+}
+
+
+.task-card {
+    background: #1a1a2e;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+    text-align: left;
+    transform: perspective(600px) rotateX(0deg) scale(1.02);
+}
+
+.task-card:hover {
+    transform: perspective(600px) rotateX(0deg) scale(1.02);
+}
+
+/* Completed task style */
+.completed {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+/* Task actions */
+.task-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.complete-btn {
+    background: #4caf50;
+    color: #fff;
+}
+.delete-btn {
+    background: #f44336;
+    color: #fff;
+}

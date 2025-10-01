@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>&#128197; Student Planner</h1>
+        <!-- day selector -->
+        <div class="week-tabs">
+            <button class="day-btn active" data-day="Monday">Mon</button>
+            <button class="day-btn active" data-day="Tuesday">Tue</button>
+            <button class="day-btn active" data-day="Wednesday">Wed</button>
+            <button class="day-btn active" data-day="Thursday">Thu</button>
+            <button class="day-btn active" data-day="Friday">Fri</button>
+            <button class="day-btn active" data-day="Saturday">Sat</button>
+            <button class="day-btn active" data-day="Sunday">Sun</button>
+        </div>
+
+        <!-- Task input -->
+        <div class="task-input">
+            <input type="text" id="taskTitle" placeholder="Enter Task Title...">
+            <textarea id="taskNotes" placeholder="Enter notes..."></textarea>
+            <button id="addTaskbtn">&#10133; Add Task</button>
+        </div>
+
+        <!--Task list -->
+        <div id="taskList" class="task-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
